@@ -25,7 +25,7 @@ SECRET_KEY = '9$nu!3v)wxwak=yc80$-6&v0ka33j8@u*(!62=$r-ncjyk#&u4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -34,9 +34,10 @@ INSTALLED_APPS = [
     'movies',
     'accounts',
     'community',
-    'rest_framework',
 
+    'rest_framework',
     'corsheaders',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,10 +55,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
-# 2. 모든 Origin 허용
-CORS_ALLOW_ALL_ORIGINS = True
 
 
 ROOT_URLCONF = 'config.urls'
