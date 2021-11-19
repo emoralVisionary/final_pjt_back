@@ -1,0 +1,564 @@
+[
+    {
+        "model": "movies.genre",
+        "pk": 28,
+        "fields": {
+            "name": "Action"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 12,
+        "fields": {
+            "name": "Adventure"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 16,
+        "fields": {
+            "name": "Animation"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 35,
+        "fields": {
+            "name": "Comedy"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 80,
+        "fields": {
+            "name": "Crime"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 99,
+        "fields": {
+            "name": "Documentary"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 18,
+        "fields": {
+            "name": "Drama"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 10751,
+        "fields": {
+            "name": "Family"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 14,
+        "fields": {
+            "name": "Fantasy"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 36,
+        "fields": {
+            "name": "History"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 27,
+        "fields": {
+            "name": "Horror"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 10402,
+        "fields": {
+            "name": "Music"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 9648,
+        "fields": {
+            "name": "Mystery"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 10749,
+        "fields": {
+            "name": "Romance"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 878,
+        "fields": {
+            "name": "Science Fiction"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 10770,
+        "fields": {
+            "name": "TV Movie"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 53,
+        "fields": {
+            "name": "Thriller"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 10752,
+        "fields": {
+            "name": "War"
+        }
+    },
+    {
+        "model": "movies.genre",
+        "pk": 37,
+        "fields": {
+            "name": "Western"
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 10198,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                10749,
+                10751,
+                16
+            ],
+            "original_language": "en",
+            "original_title": "The Princess and the Frog",
+            "overview": "1930\ub144\ub300 \ubbf8\uad6d \ub274\uc62c\ub9ac\uc5b8\uc2a4. \ud2f0\uc544\ub098(\uc560\ub2c8\uce74 \ub178\ub2c8 \ub85c\uc988)\ub294 \ubc24\ub0ae\uc5c6\uc774 \uc544\ub974\ubc14\uc774\ud2b8\ub97c \ub6f0\uba70 \ub3c8\uc744 \ubaa8\uc740\ub2e4. \uc77c\ucc0d \ub3cc\uc544\uac00\uc2e0 \uc544\ube60(\ud14c\ub80c\uc2a4 \ud558\uc6cc\ub4dc)\uc758 \uafc8\uc774\uc5c8\uc73c\uba70 \uc774\uc81c\ub294 \uadf8\ub140 \ubcf8\uc778\uc758 \ubaa9\ud45c\uac00 \ub41c \ub274\uc62c\ub9ac\uc5b8\uc2a4 \ucd5c\uace0\uc758 \ub808\uc2a4\ud1a0\ub791\uc744 \uc5f4\uae30 \uc804\uae4c\uc9c0, \uadf8\ub140\uc5d0\uac90 \uc5f0\uc560\ud560 \uc2dc\uac04\ub3c4 \uc5c6\ub2e4. \uadf8\ub7ec\ub2e4\uac00 \uc6b0\uc5f0\ud788 \uc0ac\uc545\ud55c \ubd80\ub450\ub9c8\ubc95\uc0ac \ud30c\uc2e4\ub9ac\uc5d0(\ud0a4\uc2a4 \ub370\uc774\ube44\ub4dc)\uc5d0\uac8c \ud718\ub9d0\ub824 \uac1c\uad6c\ub9ac\ub85c \ubcc0\ud574\ubc84\ub9b0 \ub098\ube48 \uc655\uc790(\ube0c\ub8e8\ub178 \ucea0\ud3ec\uc2a4)\ub97c \ub9c8\uc8fc\uce5c\ub2e4. \ud0a4\uc2a4 \ud55c\ubc88\uc774\uba74 \uac1c\uad6c\ub9ac\uac00 \uc655\uc790\ub85c \ubcc0\ud55c\ub2e4\ub294 \uacf5\uc2dd\uc744 \ubbff\uace0 \ud2f0\uc544\ub098\ub294 \ub098\ube48\uc5d0\uac8c \ud0a4\uc2a4\ud558\uc9c0\ub9cc \uc624\ud788\ub824 \ud2f0\uc544\ub098\uae4c\uc9c0 \uac1c\uad6c\ub9ac\ub85c \ubcc0\ud574\ubc84\ub9ac\ub294\ub370...",
+            "popularity": 62.016,
+            "poster_path": "/ofSiOQRqsFzkgw3DEwEWXjaMr9s.jpg",
+            "release_date": "2009-12-08",
+            "title": "\uacf5\uc8fc\uc640 \uac1c\uad6c\ub9ac",
+            "vote_average": 7.1,
+            "vote_count": 4197,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 621013,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "original_language": "en",
+            "original_title": "Chemical Hearts",
+            "overview": "\uace0\ub4f1\ud559\uad50 \uad50\ub0b4 \uc2e0\ubb38 \ub3d9\uc544\ub9ac \ud3b8\uc9d1\uc7a5 \ud5e8\ub9ac \ud398\uc774\uc9c0\uc640 \uc0c8\ub86d\uac8c \ub3d9\uc544\ub9ac\uc5d0 \ub4e4\uc5b4\uc628 \uad50\ud658\ud559\uc0dd \uadf8\ub808\uc774\uc2a4 \ud0c0\uc6b4\uacfc\uc758 \ud558\uc774\ud2f4 \ub85c\ub9e8\uc2a4",
+            "popularity": 56.7,
+            "poster_path": "/q1MNlZYqhoD4U7sd7pjxD6SUf4z.jpg",
+            "release_date": "2020-08-21",
+            "title": "\ucf00\ubbf8\uceec \ud558\ud2b8",
+            "vote_average": 7.5,
+            "vote_count": 885,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 131634,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "original_language": "en",
+            "original_title": "The Hunger Games: Mockingjay - Part 2",
+            "overview": "\ub450 \ubc88\uc758 \ud5dd\uac70\uac8c\uc784\uc5d0\uc11c \uc0b4\uc544\ub0a8\uc740 \uc0dd\uc874\uc790 \ucea3\ub2c8\uc2a4 \uc5d0\ubc84\ub518. \uadf8\ub7f0 \uadf8\ub140\ub97c \ud5a5\ud55c \uc2a4\ub178\uc6b0 \ub300\ud1b5\ub839\uc758 \uacf5\uaca9\uc740 \ub354\uc6b1 \uac70\uc138\uc9c0\uace0 \ucea3\ub2c8\uc2a4\uc758 \ubd84\ub178\ub294 \ud3ed\ubc1c\ud55c\ub2e4.  \ucea3\ub2c8\uc2a4\ub294 \uadf8\ub97c \uba48\ucd94\uace0 \ubaa8\ub4e0 \uac83\uc744 \ub05d\ub0bc \uc218 \uc788\ub294 \uc0ac\ub78c\uc774 \ubc14\ub85c \uc790\uc2e0\uc784\uc744 \uae68\ub2eb\uace0, 13\uad6c\uc5ed \uad70\ub2e8\uc5d0 \ud569\ub958\ud55c\ub2e4. \ucca0\uc800\ud558\uac8c \uc900\ube44\ub97c \ub05d\ub0b8 \ucea3\ub2c8\uc2a4\uc640 \ucd5c\uc815\uc608 \uc694\uc6d0\ub4e4\uc740 \uce90\ud53c\ud1a8 \uc785\uc131\uc5d0 \uc131\uacf5\ud558\uc9c0\ub9cc \uc2a4\ub178\uc6b0 \ub300\ud1b5\ub839\uc774 \uc124\uce58\ud55c \ud568\uc815\ub4e4\ub85c \uc778\ud574 \ubaa9\uc228\uc744 \uc704\ud611\ubc1b\ub294 \uc704\ud5d8\ud55c \uc0c1\ud669\uc5d0 \ucc98\ud558\uac8c \ub41c\ub2e4.  \ud76c\uc0dd\ub41c \ub3d9\ub8cc\ub4e4\uc744 \ub4a4\ub85c\ud55c \ucc44 \uac00\uae4c\uc2a4\ub85c \uc2a4\ub178\uc6b0 \ub300\ud1b5\ub839\uacfc\uc758 \ub300\uacb0\uc744 \uc55e\ub454 \ucea3\ub2c8\uc2a4\uc5d0\uac8c \ub610 \ub2e4\ub978 \ucda9\uaca9\uc801\uc778 \uc0ac\uac74\uc774 \ubc8c\uc5b4\uc9c0\ub294\ub370\u2026",
+            "popularity": 57.552,
+            "poster_path": "/eLFGEWddcsQhRtD3CfmdpmXfz3w.jpg",
+            "release_date": "2015-11-18",
+            "title": "\ud5dd\uac70\uac8c\uc784: \ub354 \ud30c\uc774\ub110",
+            "vote_average": 6.9,
+            "vote_count": 10131,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 726916,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "original_language": "sv",
+            "original_title": "Vinterviken",
+            "overview": "\uac19\uc740 \ub3c4\uc2dc\uc5d0 \uc0b4\uc9c0\ub9cc \uc131\uc7a5 \ubc30\uacbd, \uacbd\uc81c\uc801 \uc5ec\uac74 \ub4f1 \uc5b4\ub290 \uac83 \ud558\ub098 \uacf5\ud1b5\uc810\uc774 \uc5c6\ub294 \uc5d8\ub9ac\uc0ac\ubca0\ud2b8\uc640 \uc698\uc698. \ub728\uac70\uc6b4 \uccab\uc0ac\ub791\uc758 \uc5f4\uc815\uc73c\ub85c, \uc0ac\ud68c \uacc4\uce35, \ubb38\ud654\uc801 \ud658\uacbd\uc758 \ucc28\uc774\ub97c \uadf9\ubcf5\ud560 \uc218 \uc788\uc744\uae4c.",
+            "popularity": 61.819,
+            "poster_path": "/tY2giXB3tUUhUPPjMi8zElHpQxY.jpg",
+            "release_date": "2021-09-08",
+            "title": "\uc698\uc698+\uc5d8\ub9ac\uc0ac\ubca0\ud2b8",
+            "vote_average": 5.6,
+            "vote_count": 47,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 291167,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                12,
+                878
+            ],
+            "original_language": "en",
+            "original_title": "Crystal Skulls",
+            "overview": "",
+            "popularity": 56.08,
+            "poster_path": "/8LibYV8Jf8BbVZvCh26LJo69oxe.jpg",
+            "release_date": "2014-08-12",
+            "title": "Crystal Skulls",
+            "vote_average": 4.7,
+            "vote_count": 16,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 8363,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                35
+            ],
+            "original_language": "en",
+            "original_title": "Superbad",
+            "overview": "\uba38\ub9ac \uc18d\uc5d4 \uc624\uc9c1 \u201cSEX\u201d \uc0dd\uac01\ubfd0\uc778 \ub2e8\uc138\ud3ec \ub140\uc11d\ub4e4!  \uace0\ub4f1\ud559\uad50 \uc878\uc5c5\uc744 2\uc8fc \uc55e\ub454 \ub2e8\uc9dd \uce5c\uad6c \uc138\uc2a4\uc640 \uc5d0\ubc18\uc740, \uc11c\ub85c \ub2e4\ub978 \ub300\ud559\uc73c\ub85c \uc9c4\ud559\ud558\uc5ec \ud5e4\uc5b4\uc9c0\uae30 \uc804\uc5d0 \ub9c8\uc9c0\ub9c9\uc73c\ub85c \uae30\uc5b5\uc5d0 \ub0a8\uc744 \uc774\ubca4\ud2b8\uc778 \ucd1d\uac01\ub531\uc9c0 \ub5bc\uae30\ub97c \uacc4\ud68d\ud55c\ub2e4.  \ud558\uc9c0\ub9cc \ubcc0\ubcc0\ud55c \uc5ec\uc790\uce5c\uad6c \uc870\ucc28 \uc5c6\ub294 \uc774\ub4e4\uc5d0\uac8c\ub294 \ubd88\uac00\ub2a5\ud574 \ubcf4\uc774\ub294 \uacc4\ud68d\uc774\ub2e4.  \uc6b0\uc5f0\ud788 \uc138\uc2a4\uac00 \uc9dd\uc0ac\ub791\ud558\ub294 \uc904\uc2a4\uc758 \uc9d1\uc5d0\uc11c \uc5f4\ub9ac\ub294 \uc640\uc77c\ub4dc \ud30c\ud2f0\uc5d0 \ucd08\ub300\ub418\ub294\ub370, \uc870\uac74\uc740 \ud30c\ud2f0\uc5d0 \uc0ac\uc6a9\ub420 \uc220\uc744 \uc0ac\uac00\uc9c0\uace0 \uc640\uc57c \ud55c\ub2e4\ub294 \uac83\uc774\ub2e4.  \uc774\ub54c \uc5ed\uc2dc \uc5b4\ub9ac\ubc84\ub9ac\ud55c \uce5c\uad6c \ud3ec\uac94\uc774 \uac00\uc9dc \uc2e0\ubd84\uc99d\uc744 \uc774\uc6a9\ud574 \uc220\uc744 \uc0ac\ub294 \uac83\uc744 \uc81c\uc548\ud55c\ub2e4.  \uc8fc\ub958\uac00\uac8c\uc5d0\uc11c \uac00\uc9dc \uc2e0\ubd84\uc99d\uc73c\ub85c \uc220\uc744 \uc0b4 \ub54c\uae4c\uc9c0 \ub9cc\ud574\ub3c4 \ubaa8\ub4e0 \uac83\uc774 \uc21c\uc870\ub86d\uac8c \ud480\ub9ac\ub294 \uac83\ucc98\ub7fc \ubcf4\uc600\uc9c0\ub9cc, \ud604\uc7a5\uc5d0 \ub3c4\ub451\uc774 \ub4e4\uc5b4\uc624\uba74\uc11c \uac11\uc790\uae30 \ubaa8\ub4e0 \uc77c\uc774 \uaf2c\uc774\uae30 \uc2dc\uc791\ud558\ub294\ub370...",
+            "popularity": 58.538,
+            "poster_path": "/gqHRD8qNSM2dw3AEeDw2VrJsyiO.jpg",
+            "release_date": "2007-03-20",
+            "title": "\uc288\ud37c\ubc30\ub4dc",
+            "vote_average": 7.2,
+            "vote_count": 5400,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 2454,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                12,
+                10751,
+                14
+            ],
+            "original_language": "en",
+            "original_title": "The Chronicles of Narnia: Prince Caspian",
+            "overview": "\ud604\uc2e4\uc758 \uc138\uacc4\ub85c \ub3cc\uc544\uc628 \uc9c0 1\ub144 \ud6c4, \ud398\ubc88\uc2dc \ub0a8\ub9e4\ub4e4\uc740 \ub9c8\ubc95\uc758 \ud798\uc5d0 \uc758\ud574 \ub2e4\uc2dc \ub098\ub2c8\uc544\uc758 \uc138\uacc4\ub85c \ub4e4\uc5b4\uac04\ub2e4. \uadf8\ub7ec\ub098 \uadf8\uacf3\uc740 \uc774\ubbf8 \ud3d0\ud5c8\ub85c \ubcc0\ud574 \uc788\uc5c8\ub2e4. \ub098\ub2c8\uc544 \uc2dc\uac04\uc73c\ub85c \ubc8c\uc368 1,300\ub144\uc774\ub780 \uc138\uc6d4\uc774 \ud758\ub800\ub358 \uac83. \uadf8 \ub3d9\uc548 \ub098\ub2c8\uc544\ub294 \ud669\uae08\uae30\uc758 \uc885\ub9d0\uc744 \uace0\ud558\uace0, \ud154\ub9c8\ub9b0 \uc871\uc5d0\uac8c \uc810\ub839\ub418\uc5b4 \ubb34\uc790\ube44\ud55c \ubbf8\ub77c\uc988 \uc655\uc758 \ud1b5\uce58\ub97c \ubc1b\uace0 \uc788\uc5c8\ub2e4. \ud398\ubc88\uc2dc \ub0a8\ub9e4\ub4e4\uc744 \ub098\ub2c8\uc544\ub85c \ubd88\ub7ec\ub0b8 \uac74 \ud154\ub9c8\ub9b0 \uc871\uc758 \uc9c4\uc815\ud55c \uc655\uc704 \uacc4\uc2b9\uc790\uc778 \uce90\uc2a4\ud53c\uc5b8 \uc655\uc790\uc600\ub2e4. \uc0bc\ucd0c \ubbf8\ub77c\uc988\uc5d0\uac8c \uc655\uc704\ub97c \ube8f\uae34 \uadf8\ub294 \ub098\ub2c8\uc544\uc778\ub4e4\uc774 \uc228\uc5b4 \uc0ac\ub294 \uc232 \uc18d\uc73c\ub85c \ud53c\uc2e0, \ud398\ubc88\uc2dc \ub0a8\ub9e4\uc640 \ub9cc\ub09c\ub2e4. \uce90\uc2a4\ud53c\uc5b8 \uc655\uc790\ub294 \uc0bc\ucd0c\uc744 \ubb3c\ub9ac\uce58\uace0 \uc655\uc704\ub97c \ucc3e\uac8c \ub3c4\uc640\uc8fc\uba74 \ub098\ub2c8\uc544\uc778\ub4e4\uc758 \ud130\uc804\uc744 \ub3cc\ub824 \uc8fc\uaca0\ub2e4\ub294 \uc57d\uc18d\uc744 \ud558\ub294\ub370...",
+            "popularity": 51.588,
+            "poster_path": "/o89tirJIiukLxHH20jxZ2ycSneH.jpg",
+            "release_date": "2008-05-15",
+            "title": "\ub098\ub2c8\uc544 \uc5f0\ub300\uae30: \uce90\uc2a4\ud53c\uc5b8 \uc655\uc790",
+            "vote_average": 6.6,
+            "vote_count": 5073,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 98,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                28,
+                18,
+                12
+            ],
+            "original_language": "en",
+            "original_title": "Gladiator",
+            "overview": "\uc8fd\uc744 \ub0a0\uc774 \uba38\uc9c0\uc54a\uc740 \ud669\uc81c \ub9c8\ub974\ucfe0\uc2a4 \uc544\uc6b0\ub810\ub9ac\uc6b0\uc2a4\ub294 \ub9c9\uc2dc\ubb34\uc2a4\ub97c \ucd1d\uc560\ud558\uc5ec \uc544\ub4e4\uc774 \uc544\ub2cc \uadf8\uc5d0\uac8c \uad8c\ub825\uc744 \ub118\uaca8\uc8fc\uae30\ub85c \ud55c\ub2e4. \ud669\uc81c\uc758 \uc544\ub4e4 \ucf54\ubaa8\ub450\uc2a4\ub294 \uc774\uc5d0 \uc9c8\ud22c\uc640 \ubd84\ub178\ub97c \ub290\uaef4 \ud669\uc81c\ub97c \uc0b4\ud574\ud55c\ub2e4. \uc655\uc88c\ub97c \uc774\uc5b4\ubc1b\uc740 \ucf54\ubaa8\ub450\uc2a4\ub294 \ub9c9\uc2dc\ubb34\uc2a4\uc640 \uadf8\uc758 \uac00\uc871\uc744 \uc8fd\uc774\ub77c\uace0 \uba85\ub839\ud55c\ub2e4. \uac00\uc871\uc744 \ubaa8\ub450 \uc783\uace0 \uaca8\uc6b0 \uc0b4\uc544\ub0a8\uc740 \ub9c9\uc2dc\ubb34\uc2a4\ub294 \ub178\uc608\ub85c \uc804\ub77d\ud558\uace0, \ud22c\uae30\uc7a5\uc758 \uac80\ud22c\uc0ac\uac00 \ub41c\ub2e4. \uadf8\uc5d0\uac8c \ub0a8\uc740 \uac74 \uc624\uc9c1 \ud669\uc81c \ucf54\ubaa8\ub450\uc2a4\uc5d0 \ub300\ud55c \ubcf5\uc218 \ubfd0. \uac80\ud22c\uc0ac\ub85c\uc11c \ub9e4 \uacbd\uae30\ub9c8\ub2e4 \uc2b9\ub9ac\ub85c \uc774\ub04c\uba74\uc11c \uc0b4\uc544\ub0a8\uc790 \uadf8\uc758 \uba85\uc131\uc740 \ub0a0\ub85c \ub192\uc544 \uac04\ub2e4. \uadf8\ub7ec\ub358 \uc5b4\ub290 \ub0a0 \uc624\ub798 \uc804 \uc0ac\ub791\ud588\ub358 \ud669\uc81c\uc758 \ub204\uc774 \ub8e8\uc2e4\ub77c\ub97c \ub2e4\uc2dc \ub9cc\ub098\uac8c \ub418\ub294\ub370...",
+            "popularity": 42.929,
+            "poster_path": "/yemF0xxGU56Pf3JXxVr4C6kuKng.jpg",
+            "release_date": "2000-05-01",
+            "title": "\uae00\ub798\ub514\uc5d0\uc774\ud130",
+            "vote_average": 8.2,
+            "vote_count": 14354,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 25565,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                16,
+                28,
+                53,
+                878
+            ],
+            "original_language": "en",
+            "original_title": "Transformers: Beginnings",
+            "overview": "",
+            "popularity": 52.217,
+            "poster_path": "/q61s5H2DRHSJYx75adOtTL3aFuY.jpg",
+            "release_date": "2006-10-16",
+            "title": "Transformers: Beginnings",
+            "vote_average": 6.8,
+            "vote_count": 187,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 49444,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                16,
+                10751
+            ],
+            "original_language": "en",
+            "original_title": "Kung Fu Panda 2",
+            "overview": "\uadf8\ud1a0\ub85d \uc6d0\ud558\ub358 \uc6a9\uc758 \uc804\uc0ac\uac00 \ub418\uc5b4 \ubb34\uc801\uc758 5\uc778\ubc29\uacfc \ud568\uaed8 \ud3c9\ud654\uc758 \uacc4\uace1\uc744 \uc9c0\ud0a4\uac8c \ub41c \ud3ec. \uc9c4\uc815\ud55c \uc6a9\uc758 \uc804\uc0ac\ub85c \uac70\ub4ed\ub098\uae30 \uc704\ud574 \uc2dc\ud478 \uc0ac\ubd80\uc640 \ucff5\ud478 \uc218\ub828\uc5d0 \ub9e4\uc9c4\ud558\ub358 \uc911, \uc174 \uc120\uc0dd\uc774 \uc704\ub300\ud55c \ucff5\ud478 \uc0ac\ubd80\ub4e4\uc744 \ud558\ub098 \ub458\uc529 \uc81c\uac70\ud558\uace0 \uc788\ub2e4\ub294 \uc18c\uc2dd\uc744 \ub4e3\uac8c \ub41c\ub2e4.  \uc5ec\uc804\ud788 \ubc14\ub78c\uc744 \uac00\ub974\ub294 \uc8fc\uba39\uc758 \uc18c\ub9ac\ubcf4\ub2e4 \ubc30\uc5d0\uc11c \uc6b8\ub9ac\ub294 \uaf2c\ub974\ub975 \uc18c\ub9ac\uac00 \ub354 \ud06c\uace0, \uc624\ub79c \uc219\uc801\uc778 \uacc4\ub2e8 \uc55e\uc5d0\uc11c\ub294 \ub9e5\uc744 \ubabb \ucd94\ub294 \ucc9c\ubc29\uc9c0\ucd95 \ud32c\ub354 \ud3ec. \uc774\uc81c \ub9c9 \uc815\uc2dd \uc218\ub828\uc744 \uc2dc\uc791\ud558\ub824\ub294 \ud3ec\uc5d0\uac8c \ucff5\ud478\ub97c \uc9c0\ucf1c\uc57c \ud55c\ub2e4\ub294 \ub9c9\uc911\ud55c \ubbf8\uc158\uc774 \uc8fc\uc5b4\uc9c0\uace0, \ud3ec\ub294 \ubb34\uc801\uc758 5\uc778\ubc29\uacfc \ud568\uaed8 \uae38\uc744 \ub5a0\ub09c\ub2e4. \uacfc\uc5f0 \ud3ec\ub294 \ucff5\ud478\uc758 \ub300\uac00\ub4e4\ub3c4 \ub9c9\uc9c0 \ubabb\ud55c \uc174 \uc120\uc0dd\uc758 \ube44\ubc00\ubcd1\uae30\uc5d0 \ub9de\uc11c \ucff5\ud478\ub97c \uc9c0\ucf1c\ub0bc \uc218 \uc788\uc744\uae4c?",
+            "popularity": 61.617,
+            "poster_path": "/bPocc0TkmgENeBcreGSq3nNiEB7.jpg",
+            "release_date": "2011-05-25",
+            "title": "\ucff5\ud478\ud32c\ub354 2",
+            "vote_average": 6.9,
+            "vote_count": 5269,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 480157,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                27
+            ],
+            "original_language": "en",
+            "original_title": "House of the Witch",
+            "overview": "",
+            "popularity": 42.123,
+            "poster_path": "/cg6xjZOnGsYYqC7SH3o8oJV9Vr1.jpg",
+            "release_date": "2017-10-07",
+            "title": "House of the Witch",
+            "vote_average": 4.6,
+            "vote_count": 101,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 648964,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                16,
+                28,
+                12,
+                14,
+                35
+            ],
+            "original_language": "ja",
+            "original_title": "Ninja Escapades: Creation of Akatsuki, The Two Uchiha, The Far Reaches of Hope",
+            "overview": "",
+            "popularity": 62.787,
+            "poster_path": "/dORZD6Z2RKNEs9VdHHwAQGB5W5a.jpg",
+            "release_date": "2014-09-11",
+            "title": "Ninja Escapades: Creation of Akatsuki, The Two Uchiha, The Far Reaches of Hope",
+            "vote_average": 6.5,
+            "vote_count": 14,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 833971,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                18
+            ],
+            "original_language": "es",
+            "original_title": "La Casa de las Flores: la pel\u00edcula",
+            "overview": "\ubcd1\uc0c1\uc5d0 \ub204\uc6b4 \ub378\ub9ac\uc544, \uc61b \uc800\ud0dd\uc5d0 \ubcf4\ubb3c\uc774 \uc228\uaca8\uc838 \uc788\ub2e4\uace0 \ub9d0\ud55c\ub2e4. \ubc18\uc2e0\ubc18\uc758\ud558\ub294 \ub370 \ub77c \ubaa8\ub77c \uac00\ubb38 \uc138 \ub0a8\ub9e4, \uc8fd\uae30 \uc804 \uc18c\uc6d0\uc774\ub77c\ub2c8 \uc61b\uc9d1\uc5d0 \ubab0\ub798 \uc7a0\uc785\ud560 \uacc4\ud68d\uc744 \uc138\uc6b0\ub294\ub370. \ubcf4\ubb3c\uc774 \uc9c4\uc9dc \uc788\uae34 \ud55c \uac78\uae4c.",
+            "popularity": 45.445,
+            "poster_path": "/taSkrxVRwilWCdQqbwDwsqqa80t.jpg",
+            "release_date": "2021-06-23",
+            "title": "\uaf43\ub4e4\uc758 \uc9d1: \ub354 \ubb34\ube44",
+            "vote_average": 8.3,
+            "vote_count": 82,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 717192,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                28,
+                80,
+                18
+            ],
+            "original_language": "nl",
+            "original_title": "Ferry",
+            "overview": "\uac70\ub300\ud55c \ub9c8\uc57d \uc81c\uad6d\uc744 \uac74\uc124\ud558\uae30 \uc804, \ubcf4\uc2a4\uc758 \ubcf4\ubcf5\uc744 \uc704\ud574 \uace0\ud5a5\uc73c\ub85c \ub3cc\uc544\uac04 \ud398\ub9ac \ubcf4\uc6b0\ub9cc. \ud558\uc9c0\ub9cc \uadf8\uacf3\uc5d0\uc11c \uc778\uc0dd\uc744 \uc1a1\ub450\ub9ac\uc9f8 \ubc14\uafd4 \ub193\uc744 \uc0ac\ub791\uc744 \ub9cc\ub098\uace0, \uadf8\uc758 \ucda9\uc131\uc2ec\uc740 \uc2dc\ud5d8\uc5d0 \ub4e0\ub2e4.",
+            "popularity": 53.699,
+            "poster_path": "/w6n1pu9thpCVHILejsuhKf3tNCV.jpg",
+            "release_date": "2021-05-14",
+            "title": "\ud398\ub9ac",
+            "vote_average": 6.8,
+            "vote_count": 133,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 140300,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                28,
+                12,
+                16,
+                35,
+                10751
+            ],
+            "original_language": "en",
+            "original_title": "Kung Fu Panda 3",
+            "overview": "\uc5b4\ub290 \ub0a0 \uc6b0\uc5f0\ud788 \uc5b4\ub9b0 \uc2dc\uc808 \uc783\uc5b4\ubc84\ub838\ub358 \uc9c4\uc9dc \ud32c\ub354 \uc544\ubc84\uc9c0\ub97c \ub9cc\ub09c \ud3ec\ub294 \uc544\ubc84\uc9c0 \ub9ac\uc640 \ud568\uaed8 \ud32c\ub354\ub4e4\uc774 \uc5b4\uc6b8\ub824 \uc0ac\ub294 \ube44\ubc00\uc2a4\ub7ec\uc6b4 \ud32c\ub354 \ub9c8\uc744\ub85c \ud5a5\ud55c\ub2e4. \uc790\uc2e0 \ubabb\uc9c0 \uc54a\uac8c \uc5ec\uc720\uc640 \ud765 \ub118\uce58\ub294 \ud32c\ub354\ub4e4\uacfc \uc990\uac70\uc6b4 \uc2dc\uac04\uc744 \ubcf4\ub0b4\ub294 \ud3ec. \ud558\uc9c0\ub9cc \ubaa8\ub4e0 \ucff5\ud478 \ub9c8\uc2a4\ud130\ub4e4\uc744 \uc81c\uc555\ud558\uba70 \uc804\uc138\uacc4\ub97c \uc704\ud611\ud558\ub294 \uc545\ub2f9 \uce74\uc774\uc758 \ub4f1\uc7a5\uc73c\ub85c \ud3ec\ub294 \uc608\uc0c1\uce58 \ubabb\ud588\ub358 \ubd88\uac00\ub2a5\ud55c \ub3c4\uc804\uc5d0 \ub9de\ub2e5\ub728\ub9ac\uac8c \ub41c\ub2e4. \ub180\uae30 \uc88b\uc544\ud558\uace0, \uba39\ub294 \uac8c \ud589\ubcf5\uc774\uba70, \ub364\ubc99\ub300\ub294 \uac8c \ud2b9\uae30\uc778 \ud32c\ub354 \uce5c\uad6c\ub4e4\uc5d0\uac8c  \uad81\uadf9\uc758 \ucff5\ud478\ub97c \uc804\uc218\ud574\uc57c \ud558\ub294 \uac83.  \ucff5\ud478 \ud6c8\ub828\ubc95 \ub9c8\uc2a4\ud130\uc5d0 \ub098\uc120 \ud3ec\uc758 \ud32c\ub354 \uc778\uc0dd \ucd5c\ub300\uc758 \ub3c4\uc804\uc774 \uc2dc\uc791\ub41c\ub2e4.",
+            "popularity": 58.08,
+            "poster_path": "/vMaqgPgMhO1XvwzoEAurUKVQJNV.jpg",
+            "release_date": "2016-01-23",
+            "title": "\ucff5\ud478\ud32c\ub354 3",
+            "vote_average": 6.8,
+            "vote_count": 4405,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 535845,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                18
+            ],
+            "original_language": "en",
+            "original_title": "Brian Banks",
+            "overview": "2002\ub144 \uc131\ud3ed\ud589 \uc704\uc99d\uc73c\ub85c \uc5b5\uc6b8\ud55c 10\uc5ec\ub144\uc758 \uc625\uc0b4\uc774 \ub05d\uc5d0 2013\ub144 \ubbf8\uad6d \ubbf8\uc2dd\ucd95\uad6c \ub9ac\uadf8 NFL\uc5d0 \ub370\ubdd4\ud55c \ube0c\ub77c\uc5b8 \ubc45\ud06c\uc2a4\uc758 \uc2e4\ud654 \uc2a4\ud1a0\ub9ac! \ub300\ud559 \ud48b\ubcfc\ud300\uc5d0\uc11c \ud504\ub85c \uc120\uc218\ub85c \ud65c\uc57d\ud588\ub358 \ube0c\ub77c\uc774\uc5b8 \ubc45\ud06c\uc2a4, \ud558\uc9c0\ub9cc \uc131\ud3ed\ud589 \uc0ac\uac74\uc5d0 \ud718\ub9d0\ub9ac\uac8c \ub418\uc5b4 10\ub144\uc744 \uac10\uc625\uc0b4\uc774\ub97c \ud558\uac8c\ub41c\ub2e4. \ud558\uc9c0\ub9cc \uadf8\ub294 \ub05d\ub0b4 \uc790\uc2e0\uc744 \uace0\uc18c\ud55c \uc640\ub124\ud0c0 \uae41\uc2a8\uc774 \ud5c8\uc704 \uace0\uc18c\ub97c \ud588\ub2e4\ub294 \ub0b4\uc6a9\uc744 \ud655\ubcf4\ud558\ub294\ub370 \uc131\uacf5\ud558\uac8c \ub418\uc5b4 \ubb34\uc8c4 \uc120\uace0\ub97c \ubc1b\uc544\ub0b8\ub2e4.",
+            "popularity": 57.093,
+            "poster_path": "/thTN10fVMXIEkfumystpNyo0BhR.jpg",
+            "release_date": "2019-08-09",
+            "title": "\ube0c\ub77c\uc774\uc5b8 \ubc45\ud06c\uc2a4",
+            "vote_average": 7.3,
+            "vote_count": 118,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 481848,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                12,
+                10751,
+                18
+            ],
+            "original_language": "en",
+            "original_title": "The Call of the Wild",
+            "overview": "1890\ub144\ub300 \uace8\ub4dc\ub7ec\uc2dc \uc2dc\ub300,  \uae08\uad11\uc774 \ubc1c\uacac\ub418\uc5c8\ub2e4\ub294 \uc18c\uc2dd\uc5d0 \uc77c\ud655\ucc9c\uae08\uc744 \ub178\ub9b0 \uc218\ub9ce\uc740 \uc0ac\ub78c\ub4e4\uc774 \uc54c\ub798\uc2a4\uce74\ub85c \ubab0\ub824\ub4e0\ub2e4. \ub530\ub73b\ud55c \uce98\ub9ac\ud3ec\ub2c8\uc544\uc758 \ubd80\uc720\ud55c \uac00\uc815\uc5d0\uc11c \uae38\ub7ec\uc9c0\ub358 \uac1c \u2018\ubc85\u2019\uc740 \ud55c\uc21c\uac04 \ub0a9\uce58\ub418\uc5b4 \uc54c\ub798\uc2a4\uce74 \uc720\ucf58\uc73c\ub85c \ud314\ub824\uac00\uac8c \ub418\uace0 \uc548\ub77d\ud588\ub358 \uacfc\uac70\uc640\ub294 \uc804\ud600 \ub2e4\ub978 \uc0b6\uc774 \uc2dc\uc791\ub41c\ub2e4. \uad11\ud65c\ud55c \ub300\uc790\uc5f0, \uac70\uce5c \uc57d\uc721\uac15\uc2dd\uc758 \uc138\uacc4 \uc18d \uc6b0\ud3b8\ubc30\ub2ec \uc370\ub9e4\uacac \ud300\uc758 \uc2e0\ucc38\uc774 \ub41c \u2018\ubc85\u2019.  \ub04a\uc784\uc5c6\ub294 \uc5ed\uacbd\uc774 \uadf8\ub97c \ucc3e\uc544\uc624\uc9c0\ub9cc, \uc9c4\uc815\ud55c \uc6a9\uae30\ub294 \u2018\ubc85\u2019\uc744 \uc810\ucc28 \ud300\uc758 \ub9ac\ub354 \uc790\ub9ac\uc5d0 \uc624\ub974\uac8c \ud558\ub294\ub370\u2026",
+            "popularity": 37.299,
+            "poster_path": "/zWkNRqYfKG6r7rZgUy3bQSwA35o.jpg",
+            "release_date": "2020-02-19",
+            "title": "\ucf5c \uc624\ube0c \uc640\uc77c\ub4dc",
+            "vote_average": 7.6,
+            "vote_count": 2687,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 695568,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                18
+            ],
+            "original_language": "en",
+            "original_title": "Finding Grace",
+            "overview": "",
+            "popularity": 58.022,
+            "poster_path": "/cE1pT8biarqm2Sjk094Sdygsu69.jpg",
+            "release_date": "2020-04-21",
+            "title": "\ud30c\uc778\ub529 \uadf8\ub808\uc774\uc2a4",
+            "vote_average": 6.5,
+            "vote_count": 14,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 381289,
+        "fields": {
+            "adult": false,
+            "genre_ids": [
+                12,
+                35,
+                14,
+                10751,
+                18
+            ],
+            "original_language": "en",
+            "original_title": "A Dog's Purpose",
+            "overview": "\uadc0\uc5ec\uc6b4 \uc18c\ub144 \u2018\uc774\ub4e0\u2019\uc758 \ub2e8\uc9dd \ubc18\ub824\uacac \u2018\ubca0\uc77c\ub9ac\u2019\ub294 \ud589\ubcf5\ud55c \uc0dd\uc744 \ub9c8\uac10\ud55c\ub2e4. \ud558\uc9c0\ub9cc \ub208\uc744 \ub5a0\ubcf4\ub2c8 \ub2e4\uc2dc \uc2dc\uc791\ub41c \uacac\uc0dd 2\ud68c\ucc28, \uc544\ub2c8 3\ud68c\ucc28?! 1\ub4f1 \uacbd\ucc30\uacac \u2018\uc5d8\ub9ac\u2019\uc5d0\uc11c \ucc30\ub5a1\uac19\uc774 \ub9c8\uc74c\uc744 \uc54c\uc544\uc8fc\ub294 \uc18c\uc6b8\uba54\uc774\ud2b8 \u2018\ud2f0\ub178\u2019\uae4c\uc9c0! \ub2e4\uc2dc \ud0dc\uc5b4\ub0a0 \ub54c\ub9c8\ub2e4 \uc131\ubcc4\uacfc \uc0dd\uae40\uc0c8, \uc9c1\uc5c5(?)\uc5d0 \uc774\ub984\ub3c4 \ubc14\ub00c\uc9c0\ub9cc, \uc5ec\uc804\ud788 \uc601\ud63c\ub9cc\uc740 \uc0ac\ub791 \ucda9\ub9cc! \uc560\uad50 \ucda9\ub9cc! \uc8fc\uc778\ubc14\ub77c\uae30 \u2018\ubca0\uc77c\ub9ac\u2019 \uc5b4\ub290\ub367 \uacac\uc0dd 4\ud68c\ucc28, \ubc29\ub791\uacac\uc774 \ub418\uc5b4 \ub5a0\ub3cc\ub358 \u2018\ubca0\uc77c\ub9ac\u2019\ub294 \ub9c8\uce68\ub0b4 \uc790\uc2e0\uc774 \ub3cc\uc544\uc628 \uc9c4\uc9dc \uc774\uc720\ub97c \uae68\ub2eb\uace0 \uc5b4\ub518\uac00\ub85c \ub2ec\ub824\uac00\uae30 \uc2dc\uc791\ud558\ub294\ub370\u2026",
+            "popularity": 55.43,
+            "poster_path": "/1ybPzhVvsqc3ApIrvSobclVAstO.jpg",
+            "release_date": "2017-01-19",
+            "title": "\ubca0\uc77c\ub9ac \uc5b4\uac8c\uc778",
+            "vote_average": 7.6,
+            "vote_count": 2576,
+            "like_users": []
+        }
+    },
+    {
+        "model": "movies.movie",
+        "pk": 516052,
+        "fields": {
+            "adult": false,
+            "genre_ids": [],
+            "original_language": "ja",
+            "original_title": "\u9280\u6cb3\u82f1\u96c4\u4f1d\u8aac Die Neue These \u661f\u4e71 \u7b2c\u4e00\u7ae0",
+            "overview": "",
+            "popularity": 57.423,
+            "poster_path": "/zymHlQqgvqWdav52sbxJHo4MpYx.jpg",
+            "release_date": "2019-09-27",
+            "title": "\u9280\u6cb3\u82f1\u96c4\u4f1d\u8aac Die Neue These \u661f\u4e71 \u7b2c\u4e00\u7ae0",
+            "vote_average": 8.5,
+            "vote_count": 11,
+            "like_users": []
+        }
+    }
+]
