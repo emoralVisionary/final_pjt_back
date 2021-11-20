@@ -1,110 +1,80 @@
-from django.shortcuts import render,get_object_or_404
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.contrib.auth import get_user_model
 from rest_framework import status
 
-from rest_framework.decorators import authentication_classes, permission_classes
-from rest_framework.permissions import IsAuthenticated
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-
-from .serializers import PostSerializer,CommentSerializer
-from .models import Post,Comment
+from .models import Post, Comment
+from .serializers import PostListSerializer, CommentSerializer
 
 # Create your views here.
-# post 목록 조회, 생성
-@api_view(['GET','POST'])
-@authentication_classes([JSONWebTokenAuthentication])
-@permission_classes([IsAuthenticated])
-def post_list_create(request):
-    if request.method == 'GET':
-        posts = Post.objects.order_by('-pk')
-        serializer = PostSerializer(posts,many=True)
-        return Response(serializer.data)
-    else:
-        serializer = PostSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(user=request.user)
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-
-# post 조회, 수정, 삭제
-@api_view(['GET', 'PUT', 'DELETE'])
-@authentication_classes([JSONWebTokenAuthentication])
-@permission_classes([IsAuthenticated])
-def post_detail(request,post_pk):
-    post = get_object_or_404(Post, pk=post_pk)
-    if request.method == 'GET':
-        serializer = PostSerializer(post)
-        return Response(serializer.data)
-    elif request.method == 'PUT':
-        serializer = PostSerializer(post, data=request.data)
-        if not request.user.post.filter(pk=post_pk).exists():
-            return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
-    elif request.method == 'DELETE':
-        if not request.user.post.filter(pk=post_pk).exists():
-            return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
-        post.delete()
-        return Response({ 'id': post_pk }, status=status.HTTP_204_NO_CONTENT)
-
-
-# @api_view(['DELETE'])
-# @authentication_classes([JSONWebTokenAuthentication])
-# @permission_classes([IsAuthenticated])
-# def post_update_delete(request, post_pk):
-# 	post = get_object_or_404(Post, pk=post_pk)
-# 	if request.method == 'DELETE':
-# 		post.delete()
-# 		data = {
-# 			'delete': f'데이터 {post_pk}번이 삭제되었습니다.'
-# 		}
-# 		return Response(data, status=status.HTTP_204_NO_CONTENT)
-
-
-
-
-
-# comment 목록 조회, 생성
 @api_view(['GET', 'POST'])
-@authentication_classes([JSONWebTokenAuthentication])
-@permission_classes([IsAuthenticated])
-def comment_list_create(request,post_pk):
-    post = get_object_or_404(Post, pk=post_pk)
-    if request.method == 'GET':
-        comments = post.comment_set.all()
-        serializer = CommentSerializer(comments,many=True)
-        return Response(serializer.data)
-    else:
-        serializer = CommentSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(user=request.user,post=post)
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
-
-
-# comment 조회, 수정, 삭제
-@api_view(['GET', 'PUT', 'DELETE'])
-@authentication_classes([JSONWebTokenAuthentication])
-@permission_classes([IsAuthenticated])
-def comment_detail(request,post_pk,comment_pk):
-	post = get_object_or_404(Post, pk=post_pk)
-	comment = get_object_or_404(Comment, pk=comment_pk)
+def post_list_create(request):
+	# 게시글 조회
 	if request.method == 'GET':
-		serializer = CommentSerializer(comment)
+		communities = get_list_or_404(Post)
+		serializer = PostListSerializer(communities, many=True)
 		return Response(serializer.data)
-	elif request.method == 'PUT':
-		serializer = CommentSerializer(comment, data=request.data)
-		if not request.user.comment.filter(pk=comment_pk).exists():
-			return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
+	# 게시글 생성
+	elif request.method == 'POST':
+		serializer = PostListSerializer(data=request.data)
 		if serializer.is_valid(raise_exception=True):
-			serializer.save()
+			serializer.save(user=request.user)
+			return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(['GET'])
+def post_detail(request, post_pk):
+	post = get_object_or_404(Post, pk=post_pk)
+	serializer = PostListSerializer(Post)
+	return Response(serializer.data)
+
+
+@api_view(['PUT', 'DELETE'])
+def post_update_delete(request, post_pk):
+	post = get_object_or_404(Post, pk=post_pk)
+		
+	if request.method == 'PUT':
+		serializer = PostListSerializer(post, data=request.data)
+		if serializer.is_valid(raise_exception=True):
+			serializer.save(user=request.user)
 			return Response(serializer.data)
 	elif request.method == 'DELETE':
-		if not request.user.comment.filter(pk=comment_pk).exists():
-			return Response({'detail': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
+		post.delete()
+		data = {
+			'id': {post_pk}
+		}
+		return Response(data, status=status.HTTP_204_NO_CONTENT)
+
+
+
+@api_view(['GET'])
+def comment_list(request, post_pk):
+    post = get_object_or_404(Post, pk=post_pk)
+    comments = get_list_or_404(Comment)
+    serializer = CommentSerializer(comments, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def create_comment(request, post_pk):
+    post = get_object_or_404(Post, pk=post_pk)
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(user=request.user, post=post)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(['DELETE'])
+def comment_delete(request, post_pk, comment_pk):
+	post = get_object_or_404(Post, pk=post_pk)
+	comment = post.comment_set.get(pk=comment_pk)
+
+	if not request.user.comments.filter(pk=comment_pk).exists():
+		return Response({'message': '권한이 없습니다.'})
+	else:
 		comment.delete()
 		data = {
-            'id': comment_pk,
-            'delete': f'data {comment_pk} is deleted',
-        }
+			'id': {comment_pk}
+		}
 		return Response(data, status=status.HTTP_204_NO_CONTENT)

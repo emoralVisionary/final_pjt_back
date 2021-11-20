@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 # Create your models here.
@@ -8,7 +9,9 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
+    # user:Movie = M:N
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
+    # Genre:Movie = M:N
     genre_ids = models.ManyToManyField(Genre)
 
     poster_path = models.CharField(max_length=200, blank=True, null=True)
@@ -23,11 +26,26 @@ class Movie(models.Model):
     vote_average = models.FloatField(null=True, blank=True)
 
 
-class Comment(models.Model):
-    movie = models.ForeignKey(Movie,on_delete=models.CASCADE)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name="movie")
+class Review(models.Model):
+	# user:review = 1:N
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="reviews")
+	# movie:review = 1:N
+	movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
-    content = models.CharField(max_length=200)
-    rank = models.IntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+	title = models.CharField(max_length=100)
+	content = models.TextField()
+	rank = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)])
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+
+class ReviewComment(models.Model):
+	# user:reviewComment = 1:N
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="review_comments")
+	# review:reviewComment = 1:N
+	review = models.ForeignKey(Review, on_delete=models.CASCADE)
+
+	content = models.TextField()
+	rank = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)])
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
