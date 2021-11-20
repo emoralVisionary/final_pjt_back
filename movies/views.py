@@ -34,6 +34,7 @@ def list(request):
 
 
 @api_view(['GET', ])
+# @permission_classes([AllowAny])
 def detail(request, movie_id):
     
     movie = get_object_or_404(Movie, pk=movie_id)
@@ -55,11 +56,14 @@ def review_list_create(request, movie_pk):
         return Response(serializer.data)
     elif request.method == 'POST':
         serializer = ReviewListSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            movie = get_object_or_404(Movie, pk=request.data.get('movie'))
-            movie.save()        
-            serializer.save(user=request.user)
+        if serializer.is_valid():
+        # if serializer.is_valid(raise_exception=True):
+            movie = get_object_or_404(Movie, pk=movie_pk)
+            # movie.save()        
+            serializer.save(user=request.user, movie=movie)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            print(serializer.errors)
 
 
 @api_view(['PUT', 'DELETE'])
@@ -75,9 +79,9 @@ def review_update_delete(request, movie_pk, review_pk):
     if request.method == 'PUT':
         serializer = ReviewListSerializer(review, data=request.data)
         if serializer.is_valid(raise_exception=True):
-            movie = get_object_or_404(Movie, pk=request.data.get('movie'))
-            movie.save()
-            serializer.save(user=request.user)
+            movie = get_object_or_404(Movie, pk=movie_pk)
+            # movie.save()
+            serializer.save(user=request.user, movie=movie)
             return Response(serializer.data)
     elif request.method == 'DELETE':
         review = get_object_or_404(Review, pk=review_pk)
