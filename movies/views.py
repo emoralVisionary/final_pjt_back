@@ -5,8 +5,9 @@ from django.core import serializers
 from django.http import HttpResponse
 
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import status
 
 from .models import Movie, Review, ReviewComment, Genre
@@ -45,8 +46,10 @@ def detail(request, movie_id):
 
 
 @api_view(['GET', 'POST'])
-# 리뷰 조회/작성
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
 def review_list_create(request, movie_pk):
+    # 리뷰 조회/작성
     if request.method == 'GET':
         reviews = get_list_or_404(Review, movie_id=movie_pk)
         serializer = ReviewListSerializer(reviews, many=True)
@@ -64,9 +67,14 @@ def review_list_create(request, movie_pk):
 
 
 @api_view(['PUT', 'DELETE'])
-# 리뷰 수정/삭제
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
 def review_update_delete(request, movie_pk, review_pk):
+    # 리뷰 수정/삭제
     review = get_object_or_404(Review, pk=review_pk)
+
+    if not request.user.reviews.filter(pk=review_pk).exists():
+        return Response({'message': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
 
     if request.method == 'PUT':
         serializer = ReviewListSerializer(review, data=request.data)
@@ -78,12 +86,17 @@ def review_update_delete(request, movie_pk, review_pk):
     elif request.method == 'DELETE':
         review = get_object_or_404(Review, pk=review_pk)
         review.delete()
-        return Response({ 'id': review_pk })
+        data = { 
+            'id': {review_pk} 
+            }
+        return Response(data, status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['GET', 'POST'])
-# 리뷰에 대한 댓글 조회/작성
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
 def review_comment_list_create(request, review_pk):
+    # 리뷰에 대한 댓글 조회/작성
     if request.method == 'GET':
         review = get_object_or_404(Review, pk=review_pk)
         comments = review.reviewcomment_set.all()
@@ -102,5 +115,12 @@ def review_comment_list_create(request, review_pk):
 def review_comment_delete(request, review_pk, review_comment_pk):
     review = get_object_or_404(Review, pk=review_pk)
     comment = review.reviewcomment_set.get(pk=review_comment_pk)
+
+    if not request.user.review_comments.filter(pk=review_comment_pk).exists():
+        return Response({'message': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
+    
     comment.delete()    
-    return Response({ 'id': review_comment_pk })
+    data = { 
+            'id': {review_comment_pk} 
+            }
+    return Response(data, status=status.HTTP_204_NO_CONTENT)
