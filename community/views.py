@@ -68,7 +68,8 @@ def comment_list_create(request, post_pk):
     # 게시글에 대한 댓글 목록
     if request.method == 'GET':
         post = get_object_or_404(Post, pk=post_pk)
-        comments = get_list_or_404(post)
+        # comments = get_list_or_404(post)
+        comments = post.comment_set.all()
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
     # 게시글에 대한 댓글 생성
