@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.contrib.auth import get_user_model
 from rest_framework import status
@@ -11,17 +11,23 @@ from .serializers import PostListSerializer, CommentSerializer
 
 # Create your views here.
 @api_view(['GET', 'POST'])
-# 로그인 한 사람만 게시글 목록 조회 및 게시글 생성 가능
-@authentication_classes([JSONWebTokenAuthentication])
-@permission_classes([IsAuthenticated])
-def post_list_create(request):
+# 게시글 목록 조회는 누구나 가능
+@permission_classes([AllowAny])
+def post_list(request):
 	# 게시글 목록 조회
 	if request.method == 'GET':
 		communities = get_list_or_404(Post)
 		serializer = PostListSerializer(communities, many=True)
 		return Response(serializer.data)
+
+
+@api_view(['POST'])
+# 로그인 한 사람만 게시글 작성 가능
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
+def post_create(request):
 	# 게시글 생성
-	elif request.method == 'POST':
+	if request.method == 'POST':
 		serializer = PostListSerializer(data=request.data)
 		if serializer.is_valid(raise_exception=True):
 			serializer.save(user=request.user)

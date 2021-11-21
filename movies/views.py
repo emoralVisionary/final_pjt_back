@@ -18,7 +18,7 @@ import json
 
 @api_view(['GET', 'POST'])
 @permission_classes([AllowAny])
-def list(request):
+def index(request):
     if request.method == 'GET':
         # 전체 영화 리스트 가져오기
         movies = get_list_or_404(Movie)

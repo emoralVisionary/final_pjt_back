@@ -5,7 +5,8 @@ app_name = 'community'
 
 urlpatterns = [
     # 게시글 목록
-    path('', views.post_list_create),
+    path('', views.post_list),
+    path('create/', views.post_create),
     # 게시글 내용(디테일)
     path('<int:post_pk>/', views.post_detail), 
     # 게시글 수정/삭제

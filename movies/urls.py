@@ -5,7 +5,7 @@ app_name = 'movies'
 
 urlpatterns = [
     # 전체 영화 리스트
-    path('', views.list, name="list"),
+    path('', views.index),
     path('<int:movie_id>/', views.detail, name="detail"),
     
     # 영화에 대한 리뷰 목록
