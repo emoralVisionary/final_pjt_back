@@ -26,12 +26,12 @@ def post_list(request):
 @authentication_classes([JSONWebTokenAuthentication])
 @permission_classes([IsAuthenticated])
 def post_create(request):
-	# 게시글 생성
-	if request.method == 'POST':
-		serializer = PostListSerializer(data=request.data)
-		if serializer.is_valid(raise_exception=True):
-			serializer.save(user=request.user)
-			return Response(serializer.data, status=status.HTTP_201_CREATED)
+    # 게시글 생성
+    if request.method == 'POST':
+        serializer = PostListSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 @api_view(['GET'])
