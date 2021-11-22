@@ -11,7 +11,7 @@
 
 """
 from .models import Genre
-import requests
+import requests, render
 import json
 from datetime import date
 
@@ -73,3 +73,15 @@ def recommended(request):
         'movies': movies,
     }
     return render(request, 'movies/recommended.html', context)
+
+
+
+
+def recommended(request):
+    if request.user.is_authenticated:
+        movies = Movie.objects.all().order_by('-release_date', 'vote_average')[:10]
+        context = {
+            'movies': movies,
+        }
+        return render(request, 'movies/recommended.html', context)
+    return redirect('community:index')
