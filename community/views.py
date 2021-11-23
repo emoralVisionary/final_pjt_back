@@ -94,7 +94,7 @@ def comment_delete(request, post_pk, comment_pk):
 	post = get_object_or_404(Post, pk=post_pk)
 	comment = post.comment_set.get(pk=comment_pk)
     # 댓글 작성자만 삭제 가능하도록
-	if not request.user.comments.filter(pk=comment_pk).exists():
+	if not request.user.comment_set.filter(pk=comment_pk).exists():
 		return Response({'message': '권한이 없습니다.'}, status=status.HTTP_403_FORBIDDEN)
 	else:
 		comment.delete()
